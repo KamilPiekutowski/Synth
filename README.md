@@ -21,4 +21,5 @@ SFML
 - Effects
 - Patch retrieving and saving
 - GUI
+- step sequencer
 
