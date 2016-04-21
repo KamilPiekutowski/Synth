@@ -2,15 +2,15 @@
 
 This is digital implementation of a Synthesizer. Program uses SFML for graphics and audio. 
 
-#IDE
+###IDE
 
 Code::Blocks
 
-##In Progress
+###In Progress
 
 -fully blown ADSR envelope.
 
-##TODO
+###TODO
 
 - Filter
 - Filter Envelope
