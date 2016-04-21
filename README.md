@@ -6,6 +6,9 @@ This is digital implementation of a Synthesizer. Program uses SFML for graphics 
 
 Code::Blocks
 
+###Libraries
+SFML
+
 ###In Progress
 
 -fully blown ADSR envelope.
