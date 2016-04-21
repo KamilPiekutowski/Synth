@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1461270870 source:/home/kamilp/Documents/CS474/Project3/Sound/main.cpp
+	<SFML/Audio.hpp>
+	<cmath>
+	<iostream>
+	<SFML/Graphics.hpp>
+	"Pixel.h"
+	"ADSR_Envelope.h"
+
+1461140921 source:/home/kamilp/Documents/CS474/Project3/Sound/src/Pixel.cpp
+	"Pixel.h"
+
+1461181283 /home/kamilp/Documents/CS474/Project3/Sound/include/Pixel.h
+	<SFML/Graphics.hpp>
+	<SFML/Graphics/Drawable.hpp>
+
+1461270976 source:/home/kamilp/Documents/CS474/Project3/Sound/src/ADSR_Envelope.cpp
+	"ADSR_Envelope.h"
+	<math.h>
+	<algorithm>
+
+1461269922 /home/kamilp/Documents/CS474/Project3/Sound/include/ADSR_Envelope.h
+	<iostream>
+	<array>
+
