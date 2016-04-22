@@ -15,7 +15,7 @@ sf::Pixel d;
 //p.getPosition(v)
 
 int main() {
-    const unsigned SAMPLES = 44100 * 20;
+    const unsigned SAMPLES = 44100 * 10;
     const unsigned SAMPLE_RATE = 44100;
     const unsigned AMPLITUDE = 30000;
 
@@ -29,11 +29,11 @@ int main() {
     double increment = 440./44100/2;
     double x = 0;
     for (unsigned i = 0; i < SAMPLES; i++) {
-        int amp = 30000*i;
+        int amp = .05*i;
         if(amp > 30000){
             amp = 30000;
         }
-        raw[i] = amp * sin(x*TWO_PI);
+        raw[i] = AMPLITUDE * sin(x*TWO_PI);
         x += increment;
     }
 
@@ -54,10 +54,16 @@ int main() {
 
     sf::Sound Sound;
     Sound.setBuffer(Buffer);
-    Sound.setLoop(true);
+    Sound.setLoop(false);
     Sound.setVolume(100);
 
-    Sound.setLoop(false);
+
+    sf::Sound Sound2;
+    Sound2.setBuffer(Buffer);
+    Sound2.setLoop(false);
+    Sound2.setVolume(100);
+
+
 
     Sound.play();
     float i = 0;
@@ -69,10 +75,18 @@ int main() {
     e.GATE = true;
 
     while (1) {
-/*
+
         //e.GATE = true;
 
-        sf::sleep(sf::milliseconds(1));
+        //sf::sleep(sf::milliseconds(1));
+
+        cout << "Status " << Sound.getStatus() << endl;
+        if(!Sound.getStatus()){
+            Sound2.play();
+            sf::sleep(sf::milliseconds(10000));
+        }
+
+    /*
         Sound.setVolume(i);
 
         i += .3;
