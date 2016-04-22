@@ -7,11 +7,13 @@ ADSR_Envelope::ADSR_Envelope()
 {
     GATE = false;
     STATE = ATTACK;
-    Attack = 10000;
-    Decay = 24000; //miliseconds
+    Attack = 20000;
+    Decay = 1000; //miliseconds
     generateEnvelope(); /* generating envelope based on parameters */
                         /* Note: information is actually being stored */
                         /*       in the envelope arrays               */
+
+    cout << "A_MAX" << ATTACK_MAX << endl;
 }
 
 ADSR_Envelope::~ADSR_Envelope()
@@ -25,11 +27,13 @@ float ADSR_Envelope::getAmplitude()
     if(GATE){
         switch(STATE){
             case ATTACK:
-                amp = AttackTimeline[COUNTER];
+
+                amp = pow(10,(float) COUNTER/ (float) (Attack/2.0)) / 100.0;
                 COUNTER++;
                 if(COUNTER > Attack){
                     COUNTER = 0;
-                    STATE = DECAY;
+                    STATE = ATTACK;
+                    GATE = false;
                 }
             break;
             case DECAY:
@@ -62,6 +66,9 @@ void ADSR_Envelope::printEnvelope()
 
 void ADSR_Envelope::generateEnvelope()
 {
+
+    int i = 0;
+/*
     //generate attack formula: 100/attack * x
     int i = 0;
 
@@ -75,7 +82,7 @@ void ADSR_Envelope::generateEnvelope()
         AttackTimeline[i] = -1;
     }
     //*******************************************
-
+*/
     //generate decay
     i = 0; //reset i
     int expInterval = Decay/2;

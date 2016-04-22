@@ -1,0 +1,6 @@
+#NOTES
+
+##AMPLITUDE ARTIFACTS
+
+It appears the when applying fast attack directly to SFLM's setVolume(), the output is glitched, however sound appears to improve a lot when envelope applied directly to the buffer. I guess sf::Stream is the way to go.
+

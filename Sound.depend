@@ -23,3 +23,27 @@
 	<iostream>
 	<array>
 
+1461304431 source:/home/kamilp/Documents/Synth/src/ADSR_Envelope.cpp
+	"ADSR_Envelope.h"
+	<math.h>
+	<algorithm>
+
+1461283365 /home/kamilp/Documents/Synth/include/ADSR_Envelope.h
+	<iostream>
+	<array>
+
+1461276535 source:/home/kamilp/Documents/Synth/src/Pixel.cpp
+	"Pixel.h"
+
+1461276535 /home/kamilp/Documents/Synth/include/Pixel.h
+	<SFML/Graphics.hpp>
+	<SFML/Graphics/Drawable.hpp>
+
+1461287563 source:/home/kamilp/Documents/Synth/main.cpp
+	<SFML/Audio.hpp>
+	<cmath>
+	<iostream>
+	<SFML/Graphics.hpp>
+	"Pixel.h"
+	"ADSR_Envelope.h"
+
