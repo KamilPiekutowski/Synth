@@ -1,7 +1,7 @@
 #include <alsa/asoundlib.h>
 #include <alsa/pcm.h>
 #include <math.h>
-#define BUFFER_LEN 60000
+#define BUFFER_LEN 48000 * 8
 
 static char *device = "default";                       //soundcard
 snd_output_t *output = NULL;
@@ -39,20 +39,22 @@ int main(void)
 
 
     }
-
+    int f2 = 523;
+    int f3 = 659;
     // SINE WAVE
     printf("\nSine tone at %dHz\n",f);
   //  int i = 10;
   //  while(i > 1){
-        float amp = 1;
+        float sounds = 3;
+        float amp = 1/sounds;
         for (k=0; k<BUFFER_LEN; k++){
 
-            buffer[k] = (sin(2*M_PI*f/fs*k) * amp);
-            amp -= .00005;
+            buffer[k] = ((sin(2*M_PI*f/fs*k) + sin(2*M_PI*f2/fs*k) + sin(2*M_PI*f3/fs*k)) * amp);
+            amp -= .000001;
             if(amp < 0){
                 amp = 0;
             }             //sine wave value generation
-            printf("AMP: %f",amp);
+            //printf("AMP: %f",amp);
 
             }
 
@@ -62,6 +64,8 @@ int main(void)
           //  i--;
             //printf("i: %d\n",i);
    //  }
+
+/*
    for (k=0; k<BUFFER_LEN; k++){
 
             buffer[k] = (sin(2*M_PI*f*2/fs*k));                 //sine wave value generation
@@ -70,7 +74,7 @@ int main(void)
        // for (j=0; j<5; j++){
             frames = snd_pcm_writei(handle, buffer, BUFFER_LEN);
 
-
+*/
 
     snd_pcm_close(handle);
     return 0;
