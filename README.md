@@ -1,17 +1,19 @@
 # Synth
 
-This is digital implementation of a Synthesizer. Program uses SFML for graphics and audio. 
+This is digital implementation of a Synthesizer. Program uses SFML for graphics and ALSA library for audio. 
 
 ###IDE
 
 Code::Blocks
 
 ###Libraries
-SFML
+SFML 
+ALSA
 
 ###In Progress
 
--fully blown ADSR envelope.
+-simulation of decay
+-3 voice sound (adding 3 voices together that yields a chord)
 
 ###TODO
 
