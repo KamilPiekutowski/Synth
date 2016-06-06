@@ -12,8 +12,9 @@ ALSA
 
 ###In Progress
 
--simulation of decay
--3 voice sound (adding 3 voices together that yields a chord)
+-simulation of decay - done testing
+-3 voice sound (adding 3 voices together that yields a chord) - done testing
+-testing low frequencies (50Hz) - done testing
 
 ###TODO
 
