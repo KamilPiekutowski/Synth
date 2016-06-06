@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1465025266 source:/home/kamilp/Documents/Synth/SineTest/Sinetest.c
+1465106718 source:/home/kamilp/Documents/Synth/SineTest/Sinetest.c
 	<alsa/asoundlib.h>
 	<alsa/pcm.h>
 	<math.h>
