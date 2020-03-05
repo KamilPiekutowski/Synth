@@ -2,11 +2,11 @@
 
 This is digital implementation of a Synthesizer. Program uses SFML for graphics and ALSA library for audio. 
 
-###IDE
+### IDE
 
 Code::Blocks
 
-###Libraries
+### Libraries
 SFML 
 ALSA
 
@@ -16,7 +16,7 @@ ALSA
 - 3 voice sound (adding 3 voices together that yields a chord) - done testing
 - testing low frequencies (50Hz) - done testing
 
-###TODO
+### TODO
 
 - Filter
 - Filter Envelope
