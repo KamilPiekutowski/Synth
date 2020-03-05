@@ -10,7 +10,7 @@ Code::Blocks
 SFML 
 ALSA
 
-###In Progress
+### In Progress
 
 - simulation of decay - done testing
 - 3 voice sound (adding 3 voices together that yields a chord) - done testing
